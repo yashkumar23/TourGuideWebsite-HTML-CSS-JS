@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/notifications.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #015b75 0%, #0e8ba8 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .page-header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .container-main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .booking-section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .booking-section h2 {
+            color: #015b75;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            color: #015b75;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #015b75;
+            box-shadow: 0 0 5px rgba(1, 91, 117, 0.3);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .btn-search {
+            background: linear-gradient(135deg, #015b75 0%, #0e8ba8 100%);
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        
+        .btn-search:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(1, 91, 117, 0.4);
+            color: white;
+        }
+        
+        .hotel-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .hotel-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .hotel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hotel-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #015b75 0%, #0e8ba8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+        }
+        
+        .hotel-info {
+            padding: 20px;
+        }
+        
+        .hotel-name {
+            color: #015b75;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .hotel-rating {
+            color: #ff9800;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .hotel-description {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .hotel-price {
+            color: #015b75;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .btn-book {
+            background: #015b75;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .btn-book:hover {
+            background: #0e8ba8;
+            color: white;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!--Header start-->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">TravelMe</label>
+        <ul>
+            <li><a href="../HTML/travelme.html" target="_Blank">Home</a></li>
+            <li><a href="../HTML/About Us.html" target="_Blank">About Us</a></li>
+            <li><a href="../HTML/service.html" target="_Blank">Services</a></li>
+            <li><a href="../HTML/contact.html" target="_Blank">Contact Us</a></li>
+            <li><a href="../HTML/tourguide.html" target="_Blank">Tour Guide</a></li>
+            <li><a class="active" href="../HTML/checkout.html" target="_Blank">Checkout</a></li>
+            <li><a class="active" href="../HTML/feedback.html"target="_Blank">Feedback</a></li>
+        </ul>
+    </nav>
+    <!--header end-->
+    
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Hotel Reservation</h1>
+        <p>Find and book the perfect hotel for your stay</p>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container-main">
+        <!-- Booking Form Section -->
+        <div class="booking-section">
+            <h2>Search Hotels</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" placeholder="Enter city or hotel name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="check-in">Check-in Date</label>
+                        <input type="date" id="check-in" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="check-out">Check-out Date</label>
+                        <input type="date" id="check-out" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rooms">Number of Rooms</label>
+                        <select id="rooms" required>
+                            <option value="">Select rooms</option>
+                            <option value="1">1 Room</option>
+                            <option value="2">2 Rooms</option>
+                            <option value="3">3 Rooms</option>
+                            <option value="4">4 Rooms</option>
+                            <option value="5">5+ Rooms</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input type="number" id="guests" min="1" placeholder="Enter number of guests" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="room-type">Room Type</label>
+                        <select id="room-type" required>
+                            <option value="">Select room type</option>
+                            <option value="single">Single Room</option>
+                            <option value="double">Double Room</option>
+                            <option value="suite">Suite</option>
+                            <option value="deluxe">Deluxe</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-search">Search Hotels</button>
+            </form>
+        </div>
+        
+        <!-- Hotel Results Section -->
+        <div class="booking-section">
+            <h2>Available Hotels</h2>
+            <div class="hotel-cards">
+                <!-- Hotel Card 1 -->
+                <div class="hotel-card">
+                    <div class="hotel-image">🏨</div>
+                    <div class="hotel-info">
+                        <div class="hotel-name">Luxury Palace Hotel</div>
+                        <div class="hotel-rating">★★★★★ (4.8/5)</div>
+                        <div class="hotel-description">5-star luxury hotel with world-class amenities and exceptional service.</div>
+                        <div class="hotel-price">$250/night</div>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Hotel Card 2 -->
+                <div class="hotel-card">
+                    <div class="hotel-image">🏨</div>
+                    <div class="hotel-info">
+                        <div class="hotel-name">Comfort Inn</div>
+                        <div class="hotel-rating">★★★★ (4.5/5)</div>
+                        <div class="hotel-description">Comfortable and affordable hotel perfect for business and leisure travelers.</div>
+                        <div class="hotel-price">$120/night</div>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Hotel Card 3 -->
+                <div class="hotel-card">
+                    <div class="hotel-image">🏨</div>
+                    <div class="hotel-info">
+                        <div class="hotel-name">Budget Stay</div>
+                        <div class="hotel-rating">★★★ (4.2/5)</div>
+                        <div class="hotel-description">Budget-friendly accommodation with clean rooms and basic amenities.</div>
+                        <div class="hotel-price">$60/night</div>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Hotel Card 4 -->
+                <div class="hotel-card">
+                    <div class="hotel-image">🏨</div>
+                    <div class="hotel-info">
+                        <div class="hotel-name">Beachfront Resort</div>
+                        <div class="hotel-rating">★★★★★ (4.9/5)</div>
+                        <div class="hotel-description">Stunning beachfront resort with private beach access and water sports.</div>
+                        <div class="hotel-price">$300/night</div>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Hotel Card 5 -->
+                <div class="hotel-card">
+                    <div class="hotel-image">🏨</div>
+                    <div class="hotel-info">
+                        <div class="hotel-name">Mountain View Lodge</div>
+                        <div class="hotel-rating">★★★★ (4.6/5)</div>
+                        <div class="hotel-description">Scenic mountain lodge with hiking trails and nature activities nearby.</div>
+                        <div class="hotel-price">$150/night</div>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Hotel Card 6 -->
+                <div class="hotel-card">
+                    <div class="hotel-image">🏨</div>
+                    <div class="hotel-info">
+                        <div class="hotel-name">City Center Hotel</div>
+                        <div class="hotel-rating">★★★★ (4.4/5)</div>
+                        <div class="hotel-description">Centrally located hotel with easy access to shopping and dining.</div>
+                        <div class="hotel-price">$140/night</div>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Footer-->
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-heading-1">
+                <h2>Social Media</h2>
+                <a href="">Facebook</a>
+                <a href="">Instagram</a>
+                <a href="">Twitter</a>
+            </div>
+            <div class="footer-heading-2">
+                <h2>TravelMe</h2>
+                <a href="../HTML/travelme.html" target="_Blank">Home</a>
+                <a href="../HTML/service.html" target="_Blank">Services</a>
+                <a href="../HTML/About Us.html" target="_Blank">About Us</a>
+                <a href="../HTML/contact.html" target="_Blank">Contact US</a>
+                <a href="../HTML/checkout.html" target="_Blank">CheckOut</a>
+                <a href="../HTML/feedback.html" target="_Blank">Feedback</a>
+            </div>
+            <div class="footer-newsletter-form">
+                <h2>Subscribe to our Newsletter</h2>
+                <input type="email" id="footer-email" placeholder="enter your email address">
+                <input type="button" value="Subscribe" id="footer-sub-btn">
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/forms.js"></script>
+</body>
+</html>

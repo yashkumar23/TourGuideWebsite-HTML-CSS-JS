@@ -1,0 +1,140 @@
+section
+{
+    background-image: url("../IMAGES/bg1.webp") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+}
+h2
+{
+    color: #fff;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: bold;
+    font-style: italic;
+}
+.booking-form-box
+{
+    max-width: 350px;
+    border: 3px solid #5186bb;
+    margin:10% auto 0;
+    background-color: skyblue;
+}
+.radio-btn
+{
+    margin: 0 20px;
+    
+}
+.radio-btn .btn
+{
+    margin: 20px 10px 20px 0;
+    box-shadow: none;
+}
+.radio-btn .btn::after
+{
+    content: '';
+    height: 15px;
+    width: 15px;
+    top: -2px;
+    left: -1px;
+    background-color: #fff;
+    position: relative;
+    display: inline-block;
+    border: 3px solid #fff;
+    visibility: visible;
+    border-radius:50%
+}
+.radio-btn .btn:checked::after
+{
+    content: '';
+    background-color: #000;
+    transition: 0.5s;
+}
+
+.radio-btn span
+{
+    color: #000;
+    margin-right: 5px;
+    font-size: 12px;
+
+}
+.booking-form
+{
+    padding: 0 20px 20px;
+}
+.booking-form label
+{
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #000;
+}
+input::placeholder
+{
+    color: #000 !important;
+}
+.input-grp
+{
+    width: 151px;
+    display: inline-block;
+}
+.form-control 
+{
+    font-size: 12px !important;
+    border-radius: 0 !important;
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+.select-date::webkit-inner-spin-button,
+.select-date::webkit-inner-spin-button
+{
+    -webkit-apperance:none;
+    margin:0;
+
+}
+.select-date::webkit-calender-picker-indicator
+{
+    background: transparent !important;
+    
+}
+.custom-select
+{
+    color: #000 !important;
+    font-size: 17px !important;
+    border: 1px solid #ced4da !important;
+    box-shadow: none!important;
+    border-radius: 0 !important;
+    background:transparent!important;
+}
+.custom-select option
+{
+    color: #333;
+
+}
+.flight
+{
+    width: 100%  !important;
+    padding:9px 0  !important;
+    font-size: 12px  !important;
+    border: 1px solid #ced4da !important;
+    background:transparent!important;
+    box-shadow: none!important;
+    border-radius: 0 !important;
+
+
+}
+.flight:hover
+{
+    background:#000!important;
+    color: #fff !important;;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+

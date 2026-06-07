@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVELME</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/travelme.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/notifications.css">
+    <style>
+         #mid-info
+        {
+            display: flex;
+            flex-direction: row;
+        }
+        #contact-info {
+            background: linear-gradient(135deg, #015b75 0%, #0e8ba8 100%  );
+            padding: 60px 40px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        #contact-info h2 {
+            color: white !important;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        #contact-info span {
+            color: white;
+            font-weight: 600;
+        }
+        
+        #contact-info .inputbox {
+            margin-bottom: 20px;
+        }
+        
+        #contact-info .inputbox input,
+        #contact-info textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            margin-top: 8px;
+        }
+        
+        #contact-info .button1 {
+            background: white;
+            color: #015b75;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        
+        #contact-info .button1:hover {
+            background: #f0f0f0;
+        }
+        
+        /* Override for subscribe section */
+        .subscribe-section {
+            background: linear-gradient(135deg, #015b75 0%, #0e8ba8 100%) !important;
+        }
+
+    </style>
+    <script src="../JS/travelme.js"></script>
+    <script src="../JS/forms.js"></script>
+    
+</head>
+<body>
+    <!--header start-->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">TravelMe</label>
+        <ul>
+            <li><a class="active" href="../HTML/travelme.html">Home</a></li>
+            <li><a class="active" href="../HTML/About Us.html">About Us</a></li>
+            <li><a class="active" href="../HTML/service.html">Services</a></li>
+            <li><a class="active" href="../HTML/contact.html">Contact Us</a></li>
+            <li><a class="active" href="../HTML/tourguide.html">Tour Guide</a></li>
+            <li><a class="active" href="../HTML/checkout.html">CheckOut</a></li>
+            <li><a class="active" href="../HTML/feedback.html"target="_Blank">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <!--header end-->
+    <section>
+        <header>
+            <a href="" class="logo">TRAVELME</a>
+            <div class="toggle"onclick="toggleMenu()"></div>
+        </header>
+        <div class="content">
+            <h2>Dream  
+  
+Trip</h2>
+        </div>
+        <video id="background-video" src="../IMAGES/clip.mp4" loop muted preload="auto"></video>
+
+        <div class="play" id="play-video-btn" onclick="toggleVideo()">
+            <img src="../IMAGES/play.png" alt=""><span>Play Video</span>
+        </div>
+        
+        <div class="play" id="stop-video-btn" onclick="toggleVideo()" style="display: none;">
+            <img src="../IMAGES/close.png" alt=""><span>Stop Video</span>
+        </div>
+        <ul class="sci">
+            <li><a href=""><img src="../IMAGES/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="../IMAGES/twitter.png" alt=""></a></li>
+            <li><a href=""><img src="../IMAGES/instagram.png" alt=""></a></li>
+        </ul>
+    
+        <div class="navigation">
+            <ul>
+                <li><a href="../HTML/travelme.html" target="_Blank">Home</a></li>
+                <li><a href="../HTML/About Us.html" target="_Blank">About Us</a></li>
+                <li><a href="../HTML/service.html" target="_Blank">Services</a></li>
+                <li><a href="../HTML/contact.html"target="_Blank">Contact Us</a></li>
+                <li><a href="../HTML/tourguide.html"target="_Blank">Tour Guide</a></li>
+                <li><a class="active" href="../HTML/checkout.html" target="_Blank">Checkout</a></li>
+                <li><a class="active" href="">Feedback</a></li>
+            </ul>
+        </div>
+
+    </section>
+    <!--About Us Section-->
+    <style>
+        .about-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .about-section h1 {
+            text-align: center;
+            color: #015b75;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        
+        #mid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        #mid-info .container {
+            background: white;
+        }
+        
+        #mid-info .box {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        #mid-info .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        #mid-info .icon {
+            background: linear-gradient(135deg, #015b75 0%, #0e8ba8 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+        
+        #mid-info .content {
+            padding: 25px;
+        }
+        
+        #mid-info .content p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+    </style>
+    
+    <div class="about-section">
+        <h1>About Us</h1>
+        <div id="mid-info">
+            <div id="side" class="container">
+                <div class="box">
+                    <div class="icon">Who we are ?</div>
+                    <div class="content">
+                        <p>We are a travel agency based in pakistan which provides you all the travel facilities at single desk. We provide you facility of airline tickets booking, hotel reservation through our user friendly online system. You will get good discounts on best hotels and air tickets by using our online system.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="side" class="container">
+                <div class="box">
+                    <div class="icon">Why Choose Us ?</div>
+                    <div class="content">
+                        <p>As every single travel passionate want the best services, So we have worked with top ranked airlines, hotels to provide you the best services. Untill now we have served more than 100k tourists in managing their travel. We are top ranked in the world in front of other travel agencies. you can check our rating on different travel related websites.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="side" class="container">
+                <div class="box">
+                    <div class="icon">How we do ?</div>
+                    <div class="content">
+                        <p>We have separate systems to manage each and every thing so that our user can get the best things. we have an online portal for booking of airlines tickets, hotels through which you can book your tickets without wasting your time on going every hotel for reservation during your travel. We have a unique way of serving which our competitor don't have.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Contact Section will be replaced with Subscribe Form -->
+        <!-- Subscribe Now Section -->
+        <style>
+                        .subscribe-section {
+                background: linear-gradient(135deg, #015b75 0%, #0e8ba8 100%);
+                padding: 60px 40px;
+                margin: 40px 0;
+                text-align: center;
+                /* Changed: Removed max-width and border-radius to span full width */
+                width: 100%; 
+                box-sizing: border-box;
+            }
+
+            /* Added: A wrapper to keep the text and form centered and readable */
+            .subscribe-section-content {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .subscribe-section h2 {
+                color: white;
+                font-size: 2em;
+                margin-bottom: 15px;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+
+            .subscribe-section p {
+                color: rgba(255, 255, 255, 0.9);
+                margin-bottom: 30px;
+                font-size: 1.05em;
+            }
+
+            .subscribe-form {
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .subscribe-form input[type="email"] {
+                flex: 1;
+                min-width: 250px;
+                /* Added: Prevents the input from getting too wide on large screens */
+                max-width: 350px; 
+                padding: 15px 20px;
+                border: none;
+                border-radius: 4px;
+                font-size: 1em;
+                outline: none;
+            }
+
+            .subscribe-form input[type="email"]::placeholder {
+                color: #999;
+            }
+
+            .subscribe-form button {
+                background: white;
+                color: #015b75;
+                padding: 15px 40px;
+                border: none;
+                border-radius: 4px;
+                font-weight: 700;
+                font-size: 1em;
+                cursor: pointer;
+                transition: all 0.3s;
+                white-space: nowrap;
+            }
+
+            .subscribe-form button:hover {
+                background: #f0f0f0;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .subscribe-footer-text {
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 0.85em;
+                margin-top: 15px;
+            }
+
+            @media (max-width: 768px) {
+                .subscribe-section {
+                    padding: 40px 20px;
+                }
+                .subscribe-form {
+                    flex-direction: column;
+                }
+                .subscribe-form input[type="email"] {
+                    max-width: 100%;
+                    width: 100%;
+                }
+                .subscribe-form button {
+                    width: 100%;
+                }
+            }
+
+        </style>
+        
+        <!-- Subscribe Now Section -->
+        <div class="subscribe-section" id="contact-info">
+            <div class="subscribe-section-content">
+                <h2>SUBSCRIBE NOW</h2>
+                <p>Get exclusive travel deals and updates delivered to your inbox</p>
+                <form class="subscribe-form" action="">
+                    <input type="email" placeholder="Enter email to subscribe" required>
+                    <button type="submit">Subscribe Now</button>
+                </form>
+                <div class="subscribe-footer-text">
+                    We respect your privacy. Unsubscribe at any time.
+                </div>
+            </div>
+        </div>
+
+        
+    <!--Footer-->
+    <div class="footer-container">
+    <div class="footer">
+        <div class="footer-heading-1">
+            <h2>Social Media</h2>
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">Twitter</a>
+        </div>
+        <div class="footer-heading-2">
+            <h2>TravelMe</h2>
+            <a href="../HTML/travelme.html" target="_Blank">Home</a>
+            <a href="../HTML/service.html" target="_Blank">Services</a>
+            <a href="../HTML/About Us.html" target="_Blank">About Us</a>
+            <a href="../HTML/contact.html" target="_Blank">Contact US</a>
+            <a href="../HTML/checkout.html" target="_Blank">CheckOut</a>
+            <a href="../HTML/feedback.html" target="_Blank">Feedback</a>
+        </div>
+        <div class="footer-newsletter-form">
+    <h2>Subscribe to our Newsletter</h2>
+            <input type="email" id="footer-email" placeholder="enter your email address">
+            <input type="button" value="Subscribe" id="footer-sub-btn">
+        </div>
+    </div>
+</div>    
+
+</body>
+</html>

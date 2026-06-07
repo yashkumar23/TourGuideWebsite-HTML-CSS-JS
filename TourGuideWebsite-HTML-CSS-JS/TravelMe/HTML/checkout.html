@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckOut</title>
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <script src="../JS/checkout.js"></script>
+    <link rel="stylesheet" href="../CSS/checkout.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+</head>
+
+<body>
+   
+      <!--Header start-->
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">TravelMe</label>
+        <ul>
+            <li><a href="../HTML/travelme.html"target="_Blank">Home</a></li>
+            <li><a href="../HTML/About Us.html"target="_Blank" >About Us</a></li>
+            <li><a href="../HTML/service.html" target="_Blank">Services</a></li>
+            <li><a href="../HTML/contact.html"target="_Blank">Contact Us</a></li>
+            <li><a href="../HTML/tourguide.html"target="_Blank">Tour Guide</a></li>
+            <li><a class="active" href="../HTML/checkout.html"target="_Blank">Checkout</a></li>
+            <li><a class="active" href="../HTML/feedback.html"target="_Blank">Feedback</a></li>
+
+        </ul>
+    </nav>
+
+    <!--header end-->
+  
+
+
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">
+                        Billing Information
+                    </h3>
+                    <div class="inputbox">
+                        <span>Full Name :</span>
+                        <input type="text" placeholder="Josh wale" required>
+
+                    </div>
+                    <div class="inputbox">
+                        <span>Email Address :</span>
+                        <input type="email" placeholder="example@example.com" required>
+
+                    </div>
+                    <div class="inputbox">
+                        <span>Address :</span>
+                        <input type="text" placeholder="room-street-locality">
+                    </div>
+                    <div class="inputbox">
+                        <span>City :</span>
+                        <input type="text" placeholder="Karachi" >
+
+                    </div>
+                    <div class="flex">
+                        <div class="inputbox">
+                            <span>State :</span>
+                            <input type="text" placeholder="Sindh">
+                        </div>
+                        <div class="inputbox">
+                            <span>Zip Code :</span>
+                            <input type="text" placeholder="134 467" required>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="col">
+                    <h3 class="title">
+                        Payment Information
+                    </h3>
+                    <div class="inputbox">
+                        <span>Cards accepted :</span>
+                        <img src="card_img.png" alt="">
+                    </div>
+                    <div class="inputbox">
+                        <span>Name on the card :</span>
+                        <input type="text" placeholder="Josh wale">
+
+                    </div>
+
+                    <div class="inputbox">
+                        <span>Credit Card Number:</span>
+                        <input type="number" placeholder="123-456-896-789" required>
+                    </div>
+                    <div class="inputbox">
+                        <span>Exp Month :</span>
+                        <input type="text" placeholder="january" >
+
+                    </div>
+                    <div class="flex">
+                        <div class="inputbox">
+                            <span>Exp Year: :</span>
+                            <input type="number" placeholder="11" >
+                        </div>
+                        <div class="inputbox">
+                            <span>CVV :</span>
+                            <input type="text" placeholder="1349" required>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+            
+            <input type="button" value="Proceed to CheckOut" class="class-btn" onclick="data()">
+
+
+
+
+
+
+
+        </form>
+    </div>
+    <!--footer-->
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-heading-1">
+                <h2>Social Media</h2>
+                <a href="">Facebook</a>
+                <a href="">Instagram</a>
+                <a href="">Twitter</a>
+            </div>
+            <div class="footer-heading-2">
+                <h2>TravelMe</h2>
+                <a href="../HTML/travelme.html" target="_Blank">Home</a>
+                <a href="../HTML/service.html" target="_Blank">Services</a>
+                <a href="../HTML/About Us.html" target="_Blank">About Us</a>
+                <a href="../HTML/contact.html" target="_Blank">Contact US</a>
+                <a href="../HTML/checkout.html"target="_Blank">CheckOut</a>
+                <a href="../HTML/feedback.html" target="_Blank">Feedback</a>
+            </div>
+            <div class="footer-newsletter-form">
+        <h2>Subscribe to our Newsletter</h2>
+                <input type="email" id="footer-email" placeholder="enter your email address">
+                <input type="button" value="Subscribe" id="footer-sub-btn">
+            </div>
+        </div>
+    </div>    
+</body>
+
+</html>

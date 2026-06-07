@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - TravelMe</title>
+    
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/notifications.css">
+    <link rel="stylesheet" href="../CSS/feedback.css">
+    <script src="../JS/forms.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!--Header start-->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">TravelMe</label>
+        <ul>
+            <li><a href="../HTML/travelme.html" target="_Blank">Home</a></li>
+            <li><a href="../HTML/About Us.html" target="_Blank">About Us</a></li>
+            <li><a href="../HTML/service.html" target="_Blank">Services</a></li>
+            <li><a href="../HTML/contact.html" target="_Blank">Contact Us</a></li>
+            <li><a href="../HTML/tourguide.html" target="_Blank">Tour Guide</a></li>
+            <li><a href="../HTML/checkout.html" target="_Blank">Checkout</a></li>
+            <li><a class="active" href="../HTML/feedback.html"target="_Blank">Feedback</a></li>
+        </ul>
+    </nav>
+    <!--Header end-->
+
+    <div class="feedback-container">
+        <div class="feedback-header">
+            <h1>We Value Your Feedback</h1>
+            <p>Your feedback helps us improve our services and provide you with the best travel experience. Please share your thoughts, suggestions, and experiences with us.</p>
+        </div>
+
+        <div class="feedback-content">
+            <!-- Feedback Form -->
+            <div class="feedback-form-wrapper">
+                <h2>Send Your Feedback</h2>
+                <form id="feedbackForm" class="feedback-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="serviceType">Service Type *</label>
+                        <select id="serviceType" name="serviceType" required>
+                            <option value="">-- Select a service --</option>
+                            <option value="flight">Flight Booking</option>
+                            <option value="hotel">Hotel Reservation</option>
+                            <option value="tour">Tour Guide</option>
+                            <option value="checkout">Checkout Process</option>
+                            <option value="website">Website Experience</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="rating-group">
+                        <label>Overall Experience Rating *</label>
+                        <div class="star-rating" id="ratingStars">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                        <input type="hidden" id="rating" name="rating" value="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label>What did you like most? (Select all that apply )</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="ease" name="liked" value="Easy to use">
+                                <label for="ease">Easy to use interface</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="prices" name="liked" value="Good prices">
+                                <label for="prices">Good prices and deals</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="support" name="liked" value="Good support">
+                                <label for="support">Excellent customer support</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="variety" name="liked" value="Wide variety">
+                                <label for="variety">Wide variety of options</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="speed" name="liked" value="Fast booking">
+                                <label for="speed">Fast booking process</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedback">Your Feedback *</label>
+                        <textarea id="feedback" name="feedback" placeholder="Please share your detailed feedback, suggestions, or any issues you encountered..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="suggestions">Suggestions for Improvement</label>
+                        <textarea id="suggestions" name="suggestions" placeholder="How can we improve our services?"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Feedback</button>
+                </form>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="feedback-sidebar">
+                <!-- Why Your Feedback Matters -->
+                <div class="sidebar-box">
+                    <h3>Why Your Feedback Matters</h3>
+                    <p>Your insights help us:</p>
+                    <ul>
+                        <li>Improve our services</li>
+                        <li>Enhance user experience</li>
+                        <li>Add new features</li>
+                        <li>Fix issues quickly</li>
+                        <li>Better serve you</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="sidebar-box contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Have urgent concerns? Reach out directly:</p>
+                    <ul>
+                        <li><strong>Email:</strong> feedback@travelme.com</li>
+                        <li><strong>Phone:</strong> +92 (21) 2565-346587</li>
+                        <li><strong>Location:</strong> Karachi, Pakistan</li>
+                        <li><strong>Hours:</strong> 24/7 Support</li>
+                    </ul>
+                </div>
+
+                <!-- FAQ -->
+                <div class="sidebar-box">
+                    <h3>Quick Tips</h3>
+                    <ul>
+                        <li>Be specific about your experience</li>
+                        <li>Include relevant details</li>
+                        <li>Share both positive and negative feedback</li>
+                        <li>Suggest improvements</li>
+                        <li>We respond within 24 hours</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-heading-1">
+                <h2>Social Media</h2>
+                <a href="">Facebook</a>
+                <a href="">Instagram</a>
+                <a href="">Twitter</a>
+            </div>
+            <div class="footer-heading-2">
+                <h2>TravelMe</h2>
+                <a href="../HTML/travelme.html" target="_Blank">Home</a>
+                <a href="../HTML/service.html" target="_Blank">Services</a>
+                <a href="../HTML/About Us.html" target="_Blank">About Us</a>
+                <a href="../HTML/contact.html" target="_Blank">Contact US</a>
+                <a href="../HTML/checkout.html" target="_Blank">CheckOut</a>
+                <a href="../HTML/feedback.html" target="_Blank">Feedback</a>
+
+            </div>
+            <div class="footer-newsletter-form">
+                <h2>Subscribe to our Newsletter</h2>
+                <input type="email" id="footer-email" placeholder="enter your email address">
+                <input type="button" value="Subscribe" id="footer-sub-btn">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Star Rating System
+        const stars = document.querySelectorAll('.star');
+        const ratingInput = document.getElementById('rating');
+
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const value = this.getAttribute('data-value');
+                ratingInput.value = value;
+
+                stars.forEach(s => {
+                    if (s.getAttribute('data-value') <= value) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            });
+
+            star.addEventListener('mouseover', function() {
+                const value = this.getAttribute('data-value');
+                stars.forEach(s => {
+                    if (s.getAttribute('data-value') <= value) {
+                        s.style.color = '#ffc107';
+                    } else {
+                        s.style.color = '#ddd';
+                    }
+                });
+            });
+        });
+
+        document.getElementById('ratingStars').addEventListener('mouseleave', function() {
+            stars.forEach(star => {
+                if (star.classList.contains('active')) {
+                    star.style.color = '#ffc107';
+                } else {
+                    star.style.color = '#ddd';
+                }
+            });
+        });
+
+        // Feedback Form Submission
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const firstName = document.getElementById('firstName').value;
+            const email = document.getElementById('email').value;
+            const rating = document.getElementById('rating').value;
+            const feedback = document.getElementById('feedback').value;
+
+            if (!firstName || !email || !rating || !feedback) {
+                showNotification('Missing Information', 'Please fill in all required fields.', 'error');
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Invalid Email', 'Please enter a valid email address.', 'error');
+                return;
+            }
+
+            showNotification(
+                'Thank You!',
+                `Thank you ${firstName}! Your feedback has been received. We appreciate your input and will review it shortly.`,
+                'success'
+            );
+
+            this.reset();
+            ratingInput.value = 0;
+            stars.forEach(star => star.classList.remove('active'));
+        });
+    </script>
+</body>
+</html>

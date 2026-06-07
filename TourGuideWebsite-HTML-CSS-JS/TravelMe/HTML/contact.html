@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/notifications.css">
+    <script src="../JS/checkout.js"></script>
+    <script src="../JS/forms.js"></script>
+    <link rel="stylesheet" href="../CSS/header.css">
+</head>
+<body>
+      <!--Header start-->
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">TravelMe</label>
+        <ul>
+            <li><a href="../HTML/travelme.html"target="_Blank">Home</a></li>
+            <li><a href="../HTML/About Us.html"target="_Blank">About Us</a></li>
+            <li><a href="../HTML/service.html" target="_Blank">Services</a></li>
+            <li><a href="../HTML/contact.html"target="_Blank">Contact Us</a></li>
+            <li><a href="../HTML/tourguide.html"target="_Blank">Tour Guide</a></li>
+            <li><a class="active" href="../HTML/checkout.html"target="_Blank">Checkout</a></li>
+            <li><a class="active" href="../HTML/feedback.html"target="_Blank">Feedback</a></li>
+
+        </ul>
+    </nav>
+
+    <!--header end-->
+  
+
+    <div class="contactUs">
+        <div class="title">
+            <h2>Get in Touch</h2>
+        </div>
+        <div class="box">
+            <!--Form-->
+            <div class="contact form">
+                <h3>Send a Message</h3>
+                <form>
+                    <div class="formBox">
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>First Name</span>
+                                <input type="text" placeholder="First Name">
+                            </div>
+                            <div class="inputBox">
+                                <span>Last Name</span>
+                                <input type="text" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="text" placeholder="xyz@gmail.com">
+                            </div>
+                            <div class="inputBox">
+                                <span>Mobile Number</span>
+                                <input type="text" placeholder="+92">
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="inputBox">
+                                <span>Message</span>
+                                <textarea placeholder="Write your message here....." ></textarea>
+
+                            </div>
+                         </div> 
+                         <div class="row100">
+                            <div class="inputBox">
+                               <input type="Submit" value="Send" onclick="data()">
+                                
+                            </div>
+                         </div>  
+
+
+                    </div>
+                </form>
+            </div>
+            <!--info box-->
+            <div class="contact info">
+                <h3>Contact Info</h3>
+                <div class="infoBox">
+                    <div>
+                        <span><ion-icon name="location"></ion-icon></span>
+                        <p>Karachi <br>Pakistan</p>
+                    </div>
+                    <div>
+                        <span><ion-icon name="mail"></ion-icon></span>
+                       <a href="mailto:travelme@gmail.com">travelme@gmail.com</a>
+                    </div>
+                    <div>
+                        <span><ion-icon name="call"></ion-icon></span>
+                       <a href="tel:+92 2565346587">+92 2565346587</a>
+                    </div>
+                    <!--social media links-->
+                    <ul class="sci">
+                    <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--map box-->
+            <div class="contact map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462116.6683976706!2d66.87527738393177!3d25.193559924293428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x
+                3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1643796754058!5m2!1sen!2s" 
+                 style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="footer-container">
+    <div class="footer">
+        <div class="footer-heading-1">
+            <h2>Social Media</h2>
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">Twitter</a>
+        </div>
+        <div class="footer-heading-2">
+            <h2>TravelMe</h2>
+            <a href="../HTML/travelme.html" target="_Blank">Home</a>
+            <a href="../HTML/service.html" target="_Blank">Services</a>
+            <a href="../HTML/About Us.html" target="_Blank">About Us</a>
+            <a href="../HTML/contact.html" target="_Blank">Contact US</a>
+            <a href="../HTML/checkout.html" target="_Blank">CheckOut</a>
+            <a href="../HTML/feedback.html" target="_Blank">Feedback</a>
+
+        </div>
+        <div class="footer-newsletter-form">
+    <h2>Subscribe to our Newsletter</h2>
+            <input type="email" id="footer-email" placeholder="enter your email address">
+            <input type="button" value="Subscribe" id="footer-sub-btn">
+        </div>
+    </div>
+</div>    
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../JS/forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../CSS/About Us.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/notifications.css">
+    <script src="../JS/forms.js"></script>
+</head>
+
+<body>
+    <!--Header start-->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">TravelMe</label>
+        <ul>
+            <li><a href="../HTML/travelme.html"target="_Blank">Home</a></li>
+            <li><a href="../HTML/About Us.html"target="_Blank">About Us</a></li>
+            <li><a href="../HTML/service.html" target="_Blank">Services</a></li>
+            <li><a href="../HTML/contact.html"target="_Blank">Contact Us</a></li>
+            <li><a href="../HTML/tourguide.html"target="_Blank">Tour Guide</a></li>
+            <li><a class="active" href="../HTML/checkout.html"target="_Blank">Checkout</a></li>
+            <li><a class="active" href="../HTML/feedback.html"target="_Blank">Feedback</a></li>
+
+        </ul>
+    </nav>
+
+    <!--header end-->
+    <div class="hero-image-container">
+        <img class="hero-image" src="../IMAGES/bg1.webp" alt="">
+    </div>
+    
+    <style>
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .main-container h1 {
+            text-align: center;
+            color: #015b75;
+            font-size: 2.5em;
+            margin: 50px 0;
+            font-weight: 700;
+        }
+        
+        #mid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr ));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        #mid-info .container {
+            background: white;
+        }
+        
+        #mid-info .box {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        #mid-info .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        #mid-info .icon {
+            background: linear-gradient(135deg, #015b75 0%, #0e8ba8 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+        
+        #mid-info .content {
+            padding: 25px;
+        }
+        
+        #mid-info .content p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+        
+        #contact-info {
+            background: linear-gradient(135deg, #015b75 0%, #0e8ba8 100%);
+            padding: 60px 40px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        #contact-info h2 {
+            color: white !important;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        #contact-info span {
+            color: white;
+            font-weight: 600;
+        }
+        
+        #contact-info .inputbox {
+            margin-bottom: 20px;
+        }
+        
+        #contact-info .inputbox input,
+        #contact-info textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            margin-top: 8px;
+        }
+        
+        #contact-info .button1 {
+            background: white;
+            color: #015b75;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        
+        #contact-info .button1:hover {
+            background: #f0f0f0;
+        }
+    </style>
+    
+    <div class="main-container">
+        <h1>About Us</h1>
+        <div id="mid-info">
+            <div id="side" class="container">
+                <div class="box">
+                    <div class="icon">Who we are ?</div>
+                    <div class="content">
+                        <p>We are a travel agency based in pakistan which provides you all the travel facilities at single desk. We provide you facility of airline tickets booking, hotel reservation through our user friendly online system. You will get good discounts on best hotels and air tickets by using our online system.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="side" class="container">
+                <div class="box">
+                    <div class="icon">Why Choose Us ?</div>
+                    <div class="content">
+                        <p>As every single travel passionate want the best services, So we have worked with top ranked airlines, hotels to provide you the best services. Untill now we have served more than 100k tourists in managing their travel. We are top ranked in the world in front of other travel agencies. you can check our rating on different travel related websites.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="side" class="container">
+                <div class="box">
+                    <div class="icon">How we do ?</div>
+                    <div class="content">
+                        <p>We have separate systems to manage each and every thing so that our user can get the best things. we have an online portal for booking of airlines tickets, hotels through which you can book your tickets without wasting your time on going every hotel for reservation during your travel. We have a unique way of serving which our competitor don't have.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="contact-info">
+            <h2>Contact-Us</h2>
+            <form action="">
+                <div class="inputbox">
+                    <span>Name:</span>  
+<input type="text" placeholder="Name">
+                </div>
+                <div class="inputbox">
+                    <span>Email:</span>  
+<input type="email" placeholder="Email">
+                </div>
+                <div class="inputbox">
+                    <span>Message:</span>  
+<textarea name="" id="" cols="30" rows="10" placeholder="Your message here..."></textarea>
+                </div>
+                <div>
+                    <input type="button" class="button1" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    
+    <!--footer-->
+    <div class="footer-container">
+            <div class="footer">
+                <div class="footer-heading-1">
+                    <h2>Social Media</h2>
+                    <a href="">Facebook</a>
+                    <a href="">Instagram</a>
+                    <a href="">Twitter</a>
+                </div>
+                <div class="footer-heading-2">
+                    <h2>TravelMe</h2>
+                    <a href="../HTML/travelme.html" target="_Blank">Home</a>
+                    <a href="../HTML/service.html" target="_Blank">Services</a>
+                    <a href="../HTML/About Us.html" target="_Blank">About Us</a>
+                    <a href=../HTML/contact.html target="_Blank">Contact US</a>
+                    <a href="../HTML/checkout.html"target="_Blank">CheckOut</a>
+                    <a href="../HTML/feedback.html" target="_Blank">Feedback</a>
+
+                </div>
+                <div class="footer-newsletter-form">
+            <h2>Subscribe to our Newsletter</h2>
+                    <input type="email" id="footer-email" placeholder="enter your email address">
+                    <input type="button" value="Subscribe" id="footer-sub-btn">
+                </div>
+            </div>
+    </div>
+
+</body>
+
+</html>
